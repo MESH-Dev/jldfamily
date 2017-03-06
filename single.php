@@ -1,23 +1,28 @@
 <?php get_header(); ?>
-
-<div id="content">
-	
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		
-		<div class="post">
-			<h1><?php the_title(); ?></h1>
-			<p class="postinfo">By <?php the_author(); ?> | Categories: <?php the_category(', '); ?> | <?php comments_popup_link(); ?></p>
+<main id="content">
+	<div class="container">
+		<div class="row">
+		<div class="post_content columns-9" id="content">
 			
-			<?php the_content(); ?>
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				
+				<div class="post">
+					<h1><?php the_title(); ?></h1>
+					<p class="postinfo">Published <a href=""><?php the_date() ?></a> by <a href=""><?php the_author(); ?></a>
+					
+					<?php the_content(); ?>
+					<p>Categories: <a href="">19th Century</a></p>
+					<p>Tagged: <a href="">John L. Dickinson</a>, <a href="">Banks</a>, <a href="">History</a>, <a href="">McCoy</a></p>
+				</div>
+				<div id="content_container"></div>
+				<!-- <?php //comments_template( '', true ); ?> -->
+				
+			<?php endwhile; ?>
+
+		</div><!-- End of Content --><div class="sidebar columns-3">
+			<?php get_sidebar(); ?>
 		</div>
-		
-		<?php comments_template( '', true ); ?>
-		
-	<?php endwhile; ?>
-
-</div><!-- End of Content -->
-
-
-
-<?php get_sidebar(); ?>
+		</div>
+	</div>
+</main>
 <?php get_footer(); ?>

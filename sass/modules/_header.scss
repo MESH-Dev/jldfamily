@@ -1,0 +1,175 @@
+header{
+	a:hover{
+		text-decoration: none;
+	}
+	color: #000;
+	ul, li{
+		margin: 0;
+	}
+	img{
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@media screen and (max-width: 795px){
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+	}
+	button{
+		font-family: Georgia;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		height: 100%;
+		border: 0px;
+		background-color: #E4E4E4;
+		@media screen and (max-width: 795px){
+			display: none;
+		}
+	}
+	button#mobile_login{
+		position: relative;
+		float: right;
+		height: 40px;
+		display: none;
+		@media screen and (max-width: 795px){
+			display: inline-block;
+			margin: 1em 0;
+		}
+	}
+}
+
+nav{
+	position: relative;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	position: relative;
+	font-weight: 400;
+	font-size: 16px;
+	@media screen and (max-width: 795px){
+		height: 60px;
+	}
+	ul{
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;	
+		display: inline-block;
+		@media screen and (max-width: 795px){
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50px;
+			margin: auto;
+			border: 1px solid #000;
+			width: 90%;
+			z-index: 10;
+			background-color: #fff;
+			padding: 0;
+		}
+		li{
+			display: inline-block;
+			margin-right: 20px;
+			@media screen and (max-width: 795px){
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid #000;
+				padding: 1em;
+				&:last-of-type{
+					border-bottom: 0px;
+				}
+			}
+		}	
+	}
+	a{
+		color: #637180;
+		font-family: Georgia;
+		font-weight: 700;
+	}
+	.closed{
+		&::after{
+			content: '〉';
+			transform: rotate(90deg);
+			float: right;
+		}	
+	}
+	.opened{
+		&::after{
+			content: '〉';
+			transform: rotate(-90deg);
+			float: right;
+		}		
+	}	
+	#mobile_menu{
+		width: 90%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+		cursor: pointer;
+		display: none;
+		height: 40px;
+		border: 2px solid #000;
+		font-family: Georgia, serif;
+		font-weight: 700;
+		color: #637180;
+		vertical-align: middle;
+		padding-left: 1em;
+		padding-right: 1em;
+		@media screen and (max-width: 795px){
+			display: block;
+			line-height: 40px;
+		}
+	}
+}
+
+.logo{
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	h1, p, a{
+		margin-bottom: 0;
+		color: #000;
+	}
+	p{
+		@include playfair;
+		font-size: 2.4rem;
+	}
+	svg{
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	@media screen and (max-width: 700px){
+		svg{
+			display: block;
+			height: 70px;
+			position: relative;
+			margin: 0 auto;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		p, h1{
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+		}
+		p{
+			font-size: 14px;
+		}
+		h1{
+			font-size: 28px;
+		}
+	}
+}
+
+@media screen and (max-width: 960px){
+	body{
+		padding: 0 2em;
+	}
+}

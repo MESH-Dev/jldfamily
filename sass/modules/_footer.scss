@@ -1,0 +1,20 @@
+footer{
+	img{
+		width: 100%;
+	}
+	a{
+		font-family: Georgia, serif;
+		font-weight: 700;
+		color: #637180;
+		&:hover{
+			color: #e2e4eb;
+			text-decoration: none;
+		}		
+	}
+	.copyright{
+		float: left;
+	}
+	.contact{
+		float: right;
+	}
+}
