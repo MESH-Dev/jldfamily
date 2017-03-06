@@ -11,6 +11,13 @@ footer{
 			text-decoration: none;
 		}		
 	}
+	p{
+		@media screen and (max-width: 750px){
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+	}
 	.copyright{
 		float: left;
 	}

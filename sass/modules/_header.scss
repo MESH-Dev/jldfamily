@@ -93,6 +93,7 @@ nav{
 			content: '〉';
 			transform: rotate(90deg);
 			float: right;
+			color: #000;
 		}	
 	}
 	.opened{
@@ -100,6 +101,7 @@ nav{
 			content: '〉';
 			transform: rotate(-90deg);
 			float: right;
+			color: #000;
 		}		
 	}	
 	#mobile_menu{

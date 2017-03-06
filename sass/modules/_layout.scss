@@ -36,6 +36,7 @@ main{
 		background-color: #66717F;
 		height: 400px;
 		vertical-align: top;
+		overflow: hidden;
 		p, h3, h5{
 			color: #c9cac9;
 			margin-bottom: 1rem;
@@ -44,7 +45,7 @@ main{
 			padding: 2em;
 		}
 		@media screen and (max-width: 750px){
-			height: 300px;
+			height: 400px;
 		}
 	}
 	.slick-dots{
@@ -217,6 +218,9 @@ main{
 	vertical-align: top;
 	border-right: 2px solid #ccc;
 	padding: 1em;
+	h1{
+		margin-bottom: 1rem;
+	}
 	img{
 		max-width: 100%;
 		height: auto;
