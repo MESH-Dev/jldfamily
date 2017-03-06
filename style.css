@@ -1091,9 +1091,13 @@ main a:hover {
   vertical-align: top;
 }
 /* line 39, sass/modules/_layout.scss */
-.slider_container .textslider p {
+.slider_container .textslider p, .slider_container .textslider h3, .slider_container .textslider h5 {
+  color: #c9cac9;
+  margin-bottom: 1rem;
+}
+/* line 43, sass/modules/_layout.scss */
+.slider_container .textslider .indiv_text_slide {
   padding: 2em;
-  color: #fff;
 }
 @media screen and (max-width: 750px) {
   /* line 34, sass/modules/_layout.scss */
@@ -1101,22 +1105,22 @@ main a:hover {
     height: 300px;
   }
 }
-/* line 47, sass/modules/_layout.scss */
+/* line 50, sass/modules/_layout.scss */
 .slider_container .slick-dots {
   text-align: center;
   list-style-type: disc;
 }
-/* line 50, sass/modules/_layout.scss */
+/* line 53, sass/modules/_layout.scss */
 .slider_container .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 20px;
   height: 30px;
   margin: 0 5px;
   padding: 0;
   cursor: pointer;
 }
-/* line 58, sass/modules/_layout.scss */
+/* line 61, sass/modules/_layout.scss */
 .slider_container .slick-dots li button {
   position: relative;
   text-align: center;
@@ -1124,9 +1128,9 @@ main a:hover {
   border: 0;
   padding: 0;
   height: 30px;
-  width: 40px;
+  width: 20px;
 }
-/* line 66, sass/modules/_layout.scss */
+/* line 69, sass/modules/_layout.scss */
 .slider_container .slick-dots li button::before {
   vertical-align: middle;
   text-align: center;
@@ -1139,45 +1143,39 @@ main a:hover {
   bottom: 0;
   margin: auto;
   height: 30px;
-  width: 40px;
+  width: 20px;
   content: '•';
   opacity: 0.25;
   color: black;
   transition: all 0.3s ease-in-out;
 }
-/* line 87, sass/modules/_layout.scss */
+/* line 90, sass/modules/_layout.scss */
 .slider_container .slick-dots li.slick-active button::before {
   opacity: 1;
 }
-/* line 93, sass/modules/_layout.scss */
+/* line 96, sass/modules/_layout.scss */
 .slider_container .slick-dots li.slick-active:hover button::before {
   opacity: 1;
 }
-/* line 101, sass/modules/_layout.scss */
+/* line 104, sass/modules/_layout.scss */
 .slider_container .slick-dots li:hover button::before {
   opacity: 0.5;
 }
 
-/* line 110, sass/modules/_layout.scss */
+/* line 113, sass/modules/_layout.scss */
 .content {
   padding-top: 1em;
   padding-bottom: 1em;
   position: relative;
   border-top: 1px solid #472A2B;
 }
-/* line 115, sass/modules/_layout.scss */
+/* line 118, sass/modules/_layout.scss */
 .content p {
   margin: 0;
 }
-/* line 118, sass/modules/_layout.scss */
+/* line 121, sass/modules/_layout.scss */
 .content ul {
   font-family: Georgia, serif;
-}
-@media screen and (max-width: 750px) {
-  /* line 110, sass/modules/_layout.scss */
-  .content {
-    height: 400px;
-  }
 }
 /* line 124, sass/modules/_layout.scss */
 .content .columns-4 {

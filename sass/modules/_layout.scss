@@ -36,9 +36,12 @@ main{
 		background-color: #66717F;
 		height: 400px;
 		vertical-align: top;
-		p{
+		p, h3, h5{
+			color: #c9cac9;
+			margin-bottom: 1rem;
+		}
+		.indiv_text_slide{
 			padding: 2em;
-			color: #fff;
 		}
 		@media screen and (max-width: 750px){
 			height: 300px;
@@ -50,7 +53,7 @@ main{
 		li{
 			position: relative;
 		    display: inline-block;
-		    width: 40px;
+		    width: 20px;
 		    height: 30px;
 		    margin: 0 5px;
 		    padding: 0;
@@ -62,7 +65,7 @@ main{
 				border: 0;
 				padding: 0;
 				height: 30px;
-				width: 40px;
+				width: 20px;
 				&::before{
 					vertical-align: middle;
 					text-align: center;
@@ -75,7 +78,7 @@ main{
 				    bottom: 0;
 				    margin: auto;
 				    height: 30px;
-				    width: 40px;
+				    width: 20px;
 				    content: '•';
 				    opacity: 0.25;
 				    color: black;
@@ -117,9 +120,6 @@ main{
 	}
 	ul{
 		font-family: Georgia, serif;
-	}
-	@media screen and (max-width: 750px){
-		height: 400px;
 	}
 	.columns-4{
 		vertical-align: top;
