@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="columns-12">
-			<img src="/jldfamily/wp-content/themes/jldfamily/img/bottom-accent.jpg">
+			<img src="wp-content/themes/jldfamily/img/bottom-accent.jpg">
 <!-- 				<nav class="main-navigation">
 					<?php //wp_nav_menu( array('menu_id' => 'footer-menu', 'theme_location' => 'footer-menu') ); ?>
 				</nav> -->

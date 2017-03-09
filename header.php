@@ -256,7 +256,7 @@
 							<button>Log In</button>
 				</nav>
 				<button id="mobile_login">Log In</button>
-				<img src="/jldfamily/wp-content/themes/jldfamily/img/top-accent.jpg">
+				<img src="wp-content/themes/jldfamily/img/top-accent.jpg">
 			</div>
 
 		</div>

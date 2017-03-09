@@ -1004,7 +1004,7 @@ nav a:hover {
 }
 /* line 143, sass/modules/_header.scss */
 nav .closed::after {
-  content: url("/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg");
+  content: url("img/ic_keyboard_arrow_down_24px.svg");
   float: right;
   height: 24px;
   margin-top: 5px;
@@ -1013,7 +1013,7 @@ nav .closed::after {
 }
 /* line 153, sass/modules/_header.scss */
 nav .opened::after {
-  content: url("/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg");
+  content: url("img/ic_keyboard_arrow_down_24px.svg");
   float: right;
   height: 24px;
   margin-top: 5px;
