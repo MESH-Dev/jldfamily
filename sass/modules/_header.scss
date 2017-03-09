@@ -25,7 +25,7 @@ header{
 		height: 100%;
 		border: 0px;
 		background-color: #E4E4E4;
-		@media screen and (max-width: 795px){
+		@media screen and (max-width: 845px){
 			display: none;
 		}
 	}
@@ -34,7 +34,7 @@ header{
 		float: right;
 		height: 40px;
 		display: none;
-		@media screen and (max-width: 795px){
+		@media screen and (max-width: 845px){
 			display: inline-block;
 			margin: 1em 0;
 		}
@@ -48,15 +48,26 @@ nav{
 	position: relative;
 	font-weight: 400;
 	font-size: 16px;
-	@media screen and (max-width: 795px){
+	@media screen and (max-width: 845px){
 		height: 60px;
+	}
+	#menu-item-17{
+		position: relative;
+	}
+	@media screen and (min-width: 845px){
+		.sub-menu{
+			display: none;
+		}
+		#menu-item-17:hover > .sub-menu{
+			display: initial;
+		}
 	}
 	ul{
 		position: relative;
 		padding-top: 10px;
-		padding-bottom: 10px;	
+		padding-bottom: 10px;
 		display: inline-block;
-		@media screen and (max-width: 795px){
+		@media screen and (max-width: 845px){
 			display: none;
 			position: absolute;
 			left: 0;
@@ -72,7 +83,27 @@ nav{
 		li{
 			display: inline-block;
 			margin-right: 20px;
-			@media screen and (max-width: 795px){
+			@media screen and (max-width: 845px){
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid #000;
+				padding: 1em;
+				margin: 0;
+				&:last-of-type{
+					border-bottom: 0px;
+				}
+			}
+		}
+		.sub-menu{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 200px;
+			border: 1px solid #000;
+			z-index: 10;
+			background-color: #fff;
+			padding: 0;
+			li{
 				display: block;
 				width: 100%;
 				border-bottom: 1px solid #000;
@@ -80,30 +111,55 @@ nav{
 				&:last-of-type{
 					border-bottom: 0px;
 				}
+				@media screen and (max-width: 845px){
+					border: 0px;
+					padding-bottom: 0;
+					padding-right: 0;
+					padding-left: 0;
+					padding-top: 1rem;
+					&::before{
+						content: '–';
+						display: inline;
+					}
+				}
 			}
-		}	
+			@media screen and (max-width: 845px){
+				position: relative;
+				display: block;
+				width: 100%;
+				border: 0px;
+			}
+		}
 	}
 	a{
 		color: #637180;
 		font-family: Georgia;
 		font-weight: 700;
+		&:hover{
+			color: #e2e4eb;
+		}
 	}
 	.closed{
 		&::after{
-			content: '〉';
-			transform: rotate(90deg);
+			content: url('/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg');
 			float: right;
-			color: #000;
-		}	
+			height: 24px;
+			margin-top: 5px;
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
 	}
 	.opened{
 		&::after{
-			content: '〉';
-			transform: rotate(-90deg);
+			content: url('/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg');
 			float: right;
-			color: #000;
-		}		
-	}	
+			height: 24px;
+			margin-top: 5px;
+			transform: rotate(180deg);
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+	}
 	#mobile_menu{
 		width: 90%;
 		position: absolute;
@@ -122,7 +178,7 @@ nav{
 		vertical-align: middle;
 		padding-left: 1em;
 		padding-right: 1em;
-		@media screen and (max-width: 795px){
+		@media screen and (max-width: 845px){
 			display: block;
 			line-height: 40px;
 		}

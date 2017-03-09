@@ -33,7 +33,7 @@
 </head>
 
 <body <?php body_class(); ?>>
- 
+
 	<header>
 		<div class="container">
 
@@ -256,7 +256,7 @@
 							<button>Log In</button>
 				</nav>
 				<button id="mobile_login">Log In</button>
-				<img src="http://localhost:8888/jldfamily/wp-content/themes/jldfamily/img/top-accent.jpg">
+				<img src="/jldfamily/wp-content/themes/jldfamily/img/top-accent.jpg">
 			</div>
 
 		</div>

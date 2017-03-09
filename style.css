@@ -854,7 +854,7 @@ header button {
   border: 0px;
   background-color: #E4E4E4;
 }
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 845px) {
   /* line 18, sass/modules/_header.scss */
   header button {
     display: none;
@@ -867,7 +867,7 @@ header button#mobile_login {
   height: 40px;
   display: none;
 }
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 845px) {
   /* line 32, sass/modules/_header.scss */
   header button#mobile_login {
     display: inline-block;
@@ -884,21 +884,35 @@ nav {
   font-weight: 400;
   font-size: 16px;
 }
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 845px) {
   /* line 44, sass/modules/_header.scss */
   nav {
     height: 60px;
   }
 }
 /* line 54, sass/modules/_header.scss */
+nav #menu-item-17 {
+  position: relative;
+}
+@media screen and (min-width: 845px) {
+  /* line 58, sass/modules/_header.scss */
+  nav .sub-menu {
+    display: none;
+  }
+  /* line 61, sass/modules/_header.scss */
+  nav #menu-item-17:hover > .sub-menu {
+    display: initial;
+  }
+}
+/* line 65, sass/modules/_header.scss */
 nav ul {
   position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
   display: inline-block;
 }
-@media screen and (max-width: 795px) {
-  /* line 54, sass/modules/_header.scss */
+@media screen and (max-width: 845px) {
+  /* line 65, sass/modules/_header.scss */
   nav ul {
     display: none;
     position: absolute;
@@ -913,45 +927,101 @@ nav ul {
     padding: 0;
   }
 }
-/* line 72, sass/modules/_header.scss */
+/* line 83, sass/modules/_header.scss */
 nav ul li {
   display: inline-block;
   margin-right: 20px;
 }
-@media screen and (max-width: 795px) {
-  /* line 72, sass/modules/_header.scss */
+@media screen and (max-width: 845px) {
+  /* line 83, sass/modules/_header.scss */
   nav ul li {
     display: block;
     width: 100%;
     border-bottom: 1px solid #000;
     padding: 1em;
+    margin: 0;
   }
-  /* line 80, sass/modules/_header.scss */
+  /* line 92, sass/modules/_header.scss */
   nav ul li:last-of-type {
     border-bottom: 0px;
   }
 }
-/* line 86, sass/modules/_header.scss */
+/* line 97, sass/modules/_header.scss */
+nav ul .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  border: 1px solid #000;
+  z-index: 10;
+  background-color: #fff;
+  padding: 0;
+}
+/* line 106, sass/modules/_header.scss */
+nav ul .sub-menu li {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 1em;
+}
+/* line 111, sass/modules/_header.scss */
+nav ul .sub-menu li:last-of-type {
+  border-bottom: 0px;
+}
+@media screen and (max-width: 845px) {
+  /* line 106, sass/modules/_header.scss */
+  nav ul .sub-menu li {
+    border: 0px;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  /* line 120, sass/modules/_header.scss */
+  nav ul .sub-menu li::before {
+    content: '–';
+    display: inline;
+  }
+}
+@media screen and (max-width: 845px) {
+  /* line 97, sass/modules/_header.scss */
+  nav ul .sub-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 0px;
+  }
+}
+/* line 134, sass/modules/_header.scss */
 nav a {
   color: #637180;
   font-family: Georgia;
   font-weight: 700;
 }
-/* line 92, sass/modules/_header.scss */
+/* line 138, sass/modules/_header.scss */
+nav a:hover {
+  color: #e2e4eb;
+}
+/* line 143, sass/modules/_header.scss */
 nav .closed::after {
-  content: '〉';
-  transform: rotate(90deg);
+  content: url("/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg");
   float: right;
-  color: #000;
+  height: 24px;
+  margin-top: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-/* line 100, sass/modules/_header.scss */
+/* line 153, sass/modules/_header.scss */
 nav .opened::after {
-  content: '〉';
-  transform: rotate(-90deg);
+  content: url("/jldfamily/wp-content/themes/jldfamily/img/ic_keyboard_arrow_down_24px.svg");
   float: right;
-  color: #000;
+  height: 24px;
+  margin-top: 5px;
+  transform: rotate(180deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-/* line 107, sass/modules/_header.scss */
+/* line 163, sass/modules/_header.scss */
 nav #mobile_menu {
   width: 90%;
   position: absolute;
@@ -971,31 +1041,31 @@ nav #mobile_menu {
   padding-left: 1em;
   padding-right: 1em;
 }
-@media screen and (max-width: 795px) {
-  /* line 107, sass/modules/_header.scss */
+@media screen and (max-width: 845px) {
+  /* line 163, sass/modules/_header.scss */
   nav #mobile_menu {
     display: block;
     line-height: 40px;
   }
 }
 
-/* line 132, sass/modules/_header.scss */
+/* line 188, sass/modules/_header.scss */
 .logo {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 136, sass/modules/_header.scss */
+/* line 192, sass/modules/_header.scss */
 .logo h1, .logo p, .logo a {
   margin-bottom: 0;
   color: #000;
 }
-/* line 140, sass/modules/_header.scss */
+/* line 196, sass/modules/_header.scss */
 .logo p {
   font-family: 'Playfair Display', serif;
   font-size: 2.4rem;
 }
-/* line 144, sass/modules/_header.scss */
+/* line 200, sass/modules/_header.scss */
 .logo svg {
   height: 100%;
   position: absolute;
@@ -1003,7 +1073,7 @@ nav #mobile_menu {
   right: 0;
 }
 @media screen and (max-width: 700px) {
-  /* line 151, sass/modules/_header.scss */
+  /* line 207, sass/modules/_header.scss */
   .logo svg {
     display: block;
     height: 70px;
@@ -1012,24 +1082,24 @@ nav #mobile_menu {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 159, sass/modules/_header.scss */
+  /* line 215, sass/modules/_header.scss */
   .logo p, .logo h1 {
     display: block;
     width: 90%;
     margin: 0 auto;
   }
-  /* line 164, sass/modules/_header.scss */
+  /* line 220, sass/modules/_header.scss */
   .logo p {
     font-size: 14px;
   }
-  /* line 167, sass/modules/_header.scss */
+  /* line 223, sass/modules/_header.scss */
   .logo h1 {
     font-size: 28px;
   }
 }
 
 @media screen and (max-width: 960px) {
-  /* line 174, sass/modules/_header.scss */
+  /* line 230, sass/modules/_header.scss */
   body {
     padding: 0 2em;
   }

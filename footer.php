@@ -1,11 +1,11 @@
- 
+
 
 <footer class="site-footer">
 
 	<div class="container">
 		<div class="row">
 			<div class="columns-12">
-			<img src="http://localhost:8888/jldfamily/wp-content/themes/jldfamily/img/bottom-accent.jpg">
+			<img src="/jldfamily/wp-content/themes/jldfamily/img/bottom-accent.jpg">
 <!-- 				<nav class="main-navigation">
 					<?php //wp_nav_menu( array('menu_id' => 'footer-menu', 'theme_location' => 'footer-menu') ); ?>
 				</nav> -->

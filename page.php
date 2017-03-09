@@ -8,9 +8,9 @@
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<div class="slider_container">
 						<div class="columns-4 imgslider">
-							<div class="indiv_slide" style="background-image: url('http://localhost:8888/jldfamily/wp-content/uploads/2017/03/JL-Dickinson.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/JL-Dickinson.jpg"> --></div>
-							<div class="indiv_slide" style="background-image: url('http://localhost:8888/jldfamily/wp-content/uploads/2017/03/IMGP1603.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/IMGP1603.jpg"> --></div>
-							<div class="indiv_slide" style="background-image: url('http://localhost:8888/jldfamily/wp-content/uploads/2017/03/KVB-1.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/KVB-1.jpg"> --></div>
+							<div class="indiv_slide" style="background-image: url('/jldfamily/wp-content/uploads/2017/03/JL-Dickinson.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/JL-Dickinson.jpg"> --></div>
+							<div class="indiv_slide" style="background-image: url('/jldfamily/wp-content/uploads/2017/03/IMGP1603.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/IMGP1603.jpg"> --></div>
+							<div class="indiv_slide" style="background-image: url('/jldfamily/wp-content/uploads/2017/03/KVB-1.jpg');"><!-- <img src="http://localhost:8888/jldfamily/wp-content/uploads/2017/03/KVB-1.jpg"> --></div>
 						</div><div class="columns-8 textslider">
 							<div class="indiv_text_slide"><h3>John Lewis Dickinson</h3><h5>(1870-1954)</h5><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p></div>
 							<div class="indiv_text_slide"><h3>Mine Site Reclaimation Project Field Trip</h3><h5>West Virginia, May 2011</h5><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p></div>
@@ -32,7 +32,7 @@
 					</div>
 				<?php endwhile; ?>
 			</div>
-<!-- 
+<!--
 			<div class="columns-3">
 
 				Change this to repeater of custom fields
