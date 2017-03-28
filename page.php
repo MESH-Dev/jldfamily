@@ -27,14 +27,14 @@
 		<div class="row">
 			<?php 
 			//Check page access against user access to show content
-			if ($page_access == '' || $access == 'admin'){
+			if ($page_access == 'public' || $access == 'admin'){
 				$show_content=true;
 				//var_dump($access);
 			} elseif($page_access == 'family'){
 				if($access == 'family' || $access == 'shareholder' || $access == 'admin'){
 					$show_content = true;
 				}
-			}elseif ($page_access = 'shareholder'){
+			}elseif ($page_access == 'shareholder'){
 				if($access == 'shareholder' || $access == 'admin'){
 					$show_content = true;
 				}
