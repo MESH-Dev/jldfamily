@@ -8,14 +8,20 @@
 				
 				<div class="post">
 					<h1><?php the_title(); ?></h1>
-					<p class="postinfo">Published <a href=""><?php the_date() ?></a> by <a href=""><?php the_author(); ?></a>
+					<?php 
+						$post_month = get_the_date('m'); 
+						//var_dump($post_month);
+						$post_day = get_the_date('d');
+						$post_year = get_the_date('Y');
+					?>
+					<p class="postinfo">Published <a href="<?php echo get_day_link($post_year, $post_month, $post_day); ?>"><?php the_date() ?></a> by <?php the_author_posts_link(); ?></p>
 					
 					<?php the_content(); ?>
-					<p>Categories: <a href="">19th Century</a></p>
-					<p>Tagged: <a href="">John L. Dickinson</a>, <a href="">Banks</a>, <a href="">History</a>, <a href="">McCoy</a></p>
+					<p>Categories: <?php the_category(', '); ?><!-- <a href="">19th Century</a> --></p>
+					<p><?php the_tags("Tagged: "); ?><!-- <a href="">John L. Dickinson</a>, <a href="">Banks</a>, <a href="">History</a>, <a href="">McCoy</a> --></p>
 				</div>
 				<div id="content_container"></div>
-				<!-- <?php //comments_template( '', true ); ?> -->
+				<?php comments_template( '', true ); ?>
 				
 			<?php endwhile; ?>
 

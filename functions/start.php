@@ -28,7 +28,8 @@ add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call usi
 //Register WP Menus
 register_nav_menus(
     array(
-        'main_nav' => 'Header and breadcrumb trail heirarchy',
+        'public_nav' => 'Header and breadcrumb trail heirarchy for general public',
+        'private_nav' => 'Header and breadcrumb trail heirarchy only for members',
         'social_nav' => 'Social menu used throughout'
     )
 );

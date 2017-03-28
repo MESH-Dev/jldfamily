@@ -47,7 +47,7 @@ nav{
 	border-bottom: 2px solid #000;
 	position: relative;
 	font-weight: 400;
-	font-size: 16px;
+	//font-size: 16px;
 	@media screen and (max-width: 845px){
 		height: 60px;
 	}
@@ -62,10 +62,11 @@ nav{
 			display: initial;
 		}
 	}
+
 	ul{
 		position: relative;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		// padding-top: 10px;
+		// padding-bottom: 10px;
 		display: inline-block;
 		@media screen and (max-width: 845px){
 			display: none;
@@ -82,7 +83,13 @@ nav{
 		}
 		li{
 			display: inline-block;
-			margin-right: 20px;
+			margin-right: 4em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			a{
+				font-weight: 700;
+				font-size: 1.6em;
+			}
 			@media screen and (max-width: 845px){
 				display: block;
 				width: 100%;
@@ -231,3 +238,36 @@ nav{
 		padding: 0 2em;
 	}
 }
+
+.cls-1, .cls-5, .cls-7, .cls-8 {
+					        fill: none;
+					      }
+
+					      .cls-2 {
+					        fill: #bfbdbd;
+					      }
+
+					      .cls-3 {
+					        fill: #fff;
+					      }
+
+					      .cls-4 {
+					        fill: #234ea9;
+					      }
+
+					      .cls-5 {
+					        stroke: #000;
+					        stroke-width: 0.72px;
+					      }
+
+					      .cls-6 {
+					        clip-path: url(#clip-path);
+					      }
+
+					      .cls-7, .cls-8 {
+					        stroke: #bfbdbd;
+					      }
+
+					      .cls-8 {
+					        stroke-width: 1.24px;
+					      }

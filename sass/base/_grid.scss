@@ -67,8 +67,8 @@ $max-width: 960px;
  
  
 [class*='columns-'] {
-	// float: left;
-	// padding-right: $pad;
+	float: left;
+	padding-right: $pad;
 
 	.row &:last-of-type {
 		padding-right: 0;

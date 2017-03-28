@@ -5,15 +5,16 @@ jQuery(document).ready(function($){
 
 	//Let's do something awesome!
 
-	var contentColumns = document.getElementsByClassName('content_columns');
-	var contentContainerHeight = document.getElementById('content_container').clientHeight;
-	var viewWidth = document.documentElement.clientWidth;
+	// Controls the height for all content column items
+	// var contentColumns = document.getElementsByClassName('content_columns');
+	// var contentContainerHeight = document.getElementById('content_container').clientHeight;
+	// var viewWidth = document.documentElement.clientWidth;
 
-	if(viewWidth > 750){
-		for (var i = 0; i < contentColumns.length; i++) {
-			contentColumns[i].style.height = contentContainerHeight + "px";
-		}
-	}
+	// if(viewWidth > 750){
+	// 	for (var i = 0; i < contentColumns.length; i++) {
+	// 		contentColumns[i].style.height = contentContainerHeight + "px";
+	// 	}
+	// }
 
 	$('.imgslider').slick({
 		slidesToShow: 1,
@@ -34,8 +35,9 @@ jQuery(document).ready(function($){
 		cssEase: 'ease-in-out'
 	});
 
+	//Show/Hide for nav (public/private) @mobile resolution
 	$('#mobile_menu').click(function(){
-		$('#menu-main_nav').slideToggle();
+		$('.menu').slideToggle();
 		$('#mobile_menu').toggleClass('closed opened');
 	});
 });

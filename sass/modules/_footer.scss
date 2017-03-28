@@ -24,4 +24,11 @@ footer{
 	.contact{
 		float: right;
 	}
+
+	.sig{
+		@media($bp-smaller-than-tablet){
+			display:block;
+			padding:.5em;
+		}
+	}
 }

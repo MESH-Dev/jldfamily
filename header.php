@@ -41,40 +41,6 @@
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><svg class="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230.24 331.5">
 					  <defs>
-					    <style>
-					      .cls-1, .cls-5, .cls-7, .cls-8 {
-					        fill: none;
-					      }
-
-					      .cls-2 {
-					        fill: #bfbdbd;
-					      }
-
-					      .cls-3 {
-					        fill: #fff;
-					      }
-
-					      .cls-4 {
-					        fill: #234ea9;
-					      }
-
-					      .cls-5 {
-					        stroke: #000;
-					        stroke-width: 0.72px;
-					      }
-
-					      .cls-6 {
-					        clip-path: url(#clip-path);
-					      }
-
-					      .cls-7, .cls-8 {
-					        stroke: #bfbdbd;
-					      }
-
-					      .cls-8 {
-					        stroke-width: 1.24px;
-					      }
-					    </style>
 					    <clipPath id="clip-path" transform="translate(0 0)">
 					      <rect class="cls-1" width="230.24" height="331.5"/>
 					    </clipPath>
@@ -231,10 +197,16 @@
 				</div>
 				<nav class="main-navigation">
 					<span id="mobile_menu" class="closed">Menu</span>
-					<?php if(has_nav_menu('main_nav')){
+
+					<?php 
+						// If user is logged in (ie, they have an account in the site)
+						// show the private nav
+						if (is_user_logged_in()) { ?>
+						<?php 
+							if(has_nav_menu('private_nav')){
 								$defaults = array(
-									'theme_location'  => 'main_nav',
-									'menu'            => 'main_nav',
+									'theme_location'  => 'private_nav',
+									'menu'            => 'private_nav',
 									'container'       => false,
 									'container_class' => '',
 									'container_id'    => '',
@@ -251,12 +223,40 @@
 									'walker'          => ''
 								); wp_nav_menu( $defaults );
 							}else{
-								echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
-							} ?>
-							<button>Log In</button>
+								echo "<p><em>private_nav</em> doesn't exist! Create it and it'll render here.</p>";
+							} 
+							}else{ 
+								// If the user is not logged in, (ie they may not have an account)
+								// show the public nav
+								?>
+							<?php if(has_nav_menu('public_nav')){
+									$defaults = array(
+										'theme_location'  => 'public_nav',
+										'menu'            => 'public_nav',
+										'container'       => false,
+										'container_class' => '',
+										'container_id'    => '',
+										'menu_class'      => 'menu',
+										'menu_id'         => '',
+										'echo'            => true,
+										'fallback_cb'     => 'wp_page_menu',
+										'before'          => '',
+										'after'           => '',
+										'link_before'     => '',
+										'link_after'      => '',
+										'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+										'depth'           => 0,
+										'walker'          => ''
+									); wp_nav_menu( $defaults );
+								}else{
+									echo "<p><em>public_nav</em> doesn't exist! Create it and it'll render here.</p>";
+								} }?>
+						<?php 
+							?>
+							<button><?php wp_loginout(); ?></button>
 				</nav>
-				<button id="mobile_login">Log In</button>
-				<img src="wp-content/themes/jldfamily/img/top-accent.jpg">
+				<button id="mobile_login"><?php wp_loginout(); ?></button>
+				<img src="<?php bloginfo('template_directory'); ?>/img/top-accent.jpg">
 			</div>
 
 		</div>

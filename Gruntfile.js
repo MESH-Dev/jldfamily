@@ -42,20 +42,20 @@ module.exports = function (grunt) {
             tasks: ['compass']
           }
         },
-        browserSync: {
-          dev: {
-            bsFiles: {
-              src: [
-                "*.css",
-                "*.html"
-              ]
-            },
-            options: {
-              watchTask: true,
-              proxy: "localhost/[ENTER DIRNAME HERE]"
-            }
-          }
-        }
+        // browserSync: {
+        //   dev: {
+        //     bsFiles: {
+        //       src: [
+        //         "*.css",
+        //         "*.html"
+        //       ]
+        //     },
+        //     options: {
+        //       watchTask: true,
+        //       proxy: "localhost/[ENTER DIRNAME HERE]"
+        //     }
+        //   }
+        // }
 
     });
     // load tasks from node_modules
@@ -66,5 +66,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // tasks that will be triggered with [grunt] in the cli
-    grunt.registerTask('default', ['compass','browserSync', 'concat:js', 'uglify:js','watch']);
+    grunt.registerTask('default', ['compass','watch']);
 };
