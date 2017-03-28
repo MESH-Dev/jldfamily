@@ -26,16 +26,26 @@
 	<div class="container">
 		<div class="row">
 			<?php 
-
-			if ($page_access == ''){
+			//Check page access against user access to show content
+			if ($page_access == '' || $access == 'admin'){
 				$show_content=true;
 				//var_dump($access);
-			} 
+			} elseif($page_access == 'family'){
+				if($access == 'family' || $access == 'shareholder' || $access == 'admin'){
+					$show_content = true;
+				}
+			}elseif ($page_access = 'shareholder'){
+				if($access == 'shareholder' || $access == 'admin'){
+					$show_content = true;
+				}
+			}else{
+				$show_content = false;
+			}
 			//var_dump($show_content);
 			?>
 
 
-			<?php if ($show_content == true || $access == $page_access){ ?>
+			<?php if ($show_content == true ){ ?>
 			<div class="slider_container">
 				<?php if (have_rows('slide_panel')): ?>
 					<div class="columns-4 no-padding imgslider">
