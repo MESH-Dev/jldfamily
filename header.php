@@ -39,11 +39,46 @@
 
 			<div><!-- class="columns-12" -->
 				<div class="logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><svg class="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230.24 331.5">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<svg class="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230.24 331.5">
 					  <defs>
 					    <clipPath id="clip-path" transform="translate(0 0)">
 					      <rect class="cls-1" width="230.24" height="331.5"/>
 					    </clipPath>
+					    <style>
+						.cls-1, .cls-5, .cls-7, .cls-8 {
+						fill: none;
+						}
+
+						.cls-2 {
+						fill: #bfbdbd;
+						}
+
+						.cls-3 {
+						fill: #fff;
+						}
+
+						.cls-4 {
+						fill: #234ea9;
+						}
+
+						.cls-5 {
+						stroke: #000;
+						stroke-width: 0.72px;
+						}
+
+						.cls-6 {
+						clip-path: url(#clip-path);
+						}
+
+						.cls-7, .cls-8 {
+						stroke: #bfbdbd;
+						}
+
+						.cls-8 {
+						stroke-width: 1.24px;
+						}
+						</style>
 					  </defs>
 					  <title>dickinson_crest_web_bw</title>
 					  <path class="cls-2" d="M.51,157.52C9,43.3,115.38-.13,115.74,0c.36-.13,105.47,43.3,114,157.52,9.39,125.8-113.93,174-113.93,174h-.12S-8.88,283.31.51,157.52" transform="translate(0 0)"/>
