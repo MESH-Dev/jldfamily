@@ -288,9 +288,23 @@
 								} }?>
 						<?php 
 							?>
-							<button><?php wp_loginout(); ?></button>
+							<button>
+								<?php 
+								if(is_user_logged_in()){ ?>
+								<a href="<?php echo wp_logout_url(home_url('/')); ?>">Logout</a>
+								<?php }else{?>
+								<a href="<?php echo home_url('/'); ?>/login">Login</a>
+								<?php } ?>
+							</button>
 				</nav>
-				<button id="mobile_login"><?php wp_loginout(); ?></button>
+				<button id="mobile_login">
+					<?php 
+						if(is_user_logged_in()){ ?>
+						<a href="<?php echo wp_logout_url(home_url('/login')); ?>">Logout</a>
+						<?php }else{?>
+						<a href="<?php echo home_url('/'); ?>/login">Login</a>
+					<?php } ?>
+				</button>
 				<img src="<?php bloginfo('template_directory'); ?>/img/top-accent.jpg">
 			</div>
 

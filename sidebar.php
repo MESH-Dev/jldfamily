@@ -15,22 +15,22 @@
 		
 	<?php //endif; ?>
 
-	<h2>Authors</h2>
+	<h3>Authors</h3>
 	<ul>
 		<?php wp_list_authors(); ?>
 	</ul>
 
-	<h2>Categories</h2>
+	<h3>Categories</h3>
 	<ul>
 		<?php wp_list_categories(array('title_li'=>'')); ?>
 	</ul>
 
-	<h2>Tags</h2>
+	<h3>Tags</h3>
 	<ul>
 		<?php wp_tag_cloud(); ?>
 	</ul>
-	
-	<h2>Archives</h2>
+
+	<h3>Archives</h3>
 	<ul>
 		<?php wp_get_archives(array('show_post_count' => true)); ?>
 	</ul>

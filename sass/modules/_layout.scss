@@ -10,7 +10,19 @@ main{
 		}
 	}	
 }
-//General
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill{
+	background-color:white !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+	outline:none;
+}
 
 //Page Template
 .slider_container{
@@ -109,6 +121,22 @@ main{
 			}
 		}
 	}
+}
+
+//To make slick slider text selectable
+.slick-slider {
+-webkit-user-select: text;
+-khtml-user-select: text;
+-moz-user-select: text;
+-ms-user-select: text;
+user-select: text;
+}
+.slick-list.draggable {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 .content{
@@ -287,6 +315,15 @@ main{
 	}
 	@media screen and (max-width: 750px){
 		border-right: 0px;
+	}
+}
+
+.post{
+	ol, ul{
+	  li{
+	    font-family: Georgia;
+	    font-size: 1.4rem;  
+	  }
 	}
 }
 

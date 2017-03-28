@@ -22,10 +22,20 @@ function wpdocs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+//Alter the default reply button
 function wpb_comment_reply_text( $link ) {
 $link = str_replace( 'Reply', 'Reply&raquo;', $link );
 return $link;
 }
 add_filter( 'comment_reply_link', 'wpb_comment_reply_text' );
+
+//Supress wp-admin bar for all but Admin users
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
 
 ?>

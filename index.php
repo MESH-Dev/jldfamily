@@ -46,8 +46,15 @@
 					?>
 
 						<div class="post_listitem">
+
+
 							<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 							<h6 class="postinfo">Published <a href="<?php echo get_day_link($post_year, $post_month, $post_day); ?>"><?php echo get_the_date(); ?></a> by <?php the_author_posts_link(); ?> </h6><!-- | Categories: <?php the_category(', '); ?> --> <!-- | <?php comments_popup_link(); ?> -->
+							<?php 	// check if the post has a Post Thumbnail assigned to it.
+								if ( has_post_thumbnail() ) {
+								the_post_thumbnail('medium');
+								} 
+							?>
 							<?php the_excerpt('...'); ?>
 							<?php //the_excerpt('Read more &#8658'); ?>
 							<h6><a href="the_permalink(); ?>">Read More &raquo;</a></h6>
