@@ -129,7 +129,7 @@
 		
 			<?php }else{ ?>
 				<div class="error">
-					<h1>Sorry, you do not have access to view this page.  If you feel that you are receiving this in error, please contact the site administrator</h1>
+					<h3>Sorry, you do not have access to view this page.  If you feel that you are receiving this in error, please contact the site administrator</h3>
 				</div>
 			<?php } ?>
 
