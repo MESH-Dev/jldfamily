@@ -46,7 +46,7 @@
 
 
 			<?php if ($show_content == true ){ ?>
-			<div class="slider_container">
+			<div class="slider_container row">
 				<?php if (have_rows('slide_panel')): ?>
 					<div class="columns-4 no-padding imgslider">
 					<?php while (have_rows('slide_panel')):the_row(); 
@@ -64,7 +64,7 @@
 								<!-- <img style="display:none;" src="<?php //echo $image_url; ?>" alt="<?php //echo $image_alt;?>"> -->
 							</div>
 							<?php endwhile; ?>
-						</div>
+						</div> <!-- end imgslider -->
 							<?php endif; ?>
 							
 						<?php if (have_rows('slide_panel')): ?>
@@ -85,7 +85,7 @@
 								<?php echo $slide_content; ?>
 							</div>
 							<?php endwhile; ?>
-						</div>
+						</div><!-- end textslider -->
 							<?php endif; ?>
 			</div><!-- end slider container -->
 			<div id="content_container" class="content">
