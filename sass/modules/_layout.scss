@@ -139,6 +139,13 @@ user-select: text;
 user-select: none;
 }
 
+.slick-slide{ -webkit-user-select: text;
+   -khtml-user-select: text;
+   -moz-user-select: text;
+   -ms-user-select: text;
+   user-select: text;
+}
+
 .content{
 	padding-top: 1em;
 	padding-bottom: 1em;
