@@ -28,6 +28,9 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+
 	<!--Bugherd Install-->
 	<script type='text/javascript'>
 		(function (d, t) {
