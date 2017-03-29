@@ -338,42 +338,36 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 4.8rem;
   line-height: 1.2;
-  letter-spacing: -.1rem;
 }
 
 /* line 18, sass/base/_typography.scss */
 h2 {
   font-size: 3.6rem;
   line-height: 1.25;
-  letter-spacing: -.1rem;
 }
 
 /* line 19, sass/base/_typography.scss */
 h3 {
   font-size: 2.8rem;
   line-height: 1.3;
-  letter-spacing: -.1rem;
 }
 
 /* line 20, sass/base/_typography.scss */
 h4 {
   font-size: 2.4rem;
   line-height: 1.35;
-  letter-spacing: -.08rem;
 }
 
 /* line 21, sass/base/_typography.scss */
 h5 {
   font-size: 1.8rem;
   line-height: 1.5;
-  letter-spacing: -.05rem;
 }
 
 /* line 22, sass/base/_typography.scss */
 h6 {
   font-size: 1.6rem;
   line-height: 1.6;
-  letter-spacing: 0;
 }
 
 @media (max-width: 750px) {
@@ -414,6 +408,7 @@ p {
   line-height: 1.428;
   margin-top: 0;
   margin-bottom: 1.8rem;
+  padding-bottom: 1em;
 }
 
 /* line 43, sass/base/_typography.scss */
@@ -1614,69 +1609,71 @@ select:focus {
   }
 }
 
-/* line 330, sass/modules/_layout.scss */
-.post ol li, .post ul li {
+/* line 331, sass/modules/_layout.scss */
+.post ol li, .post ul li,
+.content_columns ol li,
+.content_columns ul li {
   font-family: Georgia;
   font-size: 1.4rem;
 }
 
 @media (max-width: 750px) {
-  /* line 340, sass/modules/_layout.scss */
+  /* line 341, sass/modules/_layout.scss */
   .smaller-than-desktop__hide {
     display: none;
   }
 }
 /* =WordPress Core
 -------------------------------------------------------------- */
-/* line 347, sass/modules/_layout.scss */
+/* line 348, sass/modules/_layout.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 351, sass/modules/_layout.scss */
+/* line 352, sass/modules/_layout.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 357, sass/modules/_layout.scss */
+/* line 358, sass/modules/_layout.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 362, sass/modules/_layout.scss */
+/* line 363, sass/modules/_layout.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 367, sass/modules/_layout.scss */
+/* line 368, sass/modules/_layout.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 372, sass/modules/_layout.scss */
+/* line 373, sass/modules/_layout.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 376, sass/modules/_layout.scss */
+/* line 377, sass/modules/_layout.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 381, sass/modules/_layout.scss */
+/* line 382, sass/modules/_layout.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 387, sass/modules/_layout.scss */
+/* line 388, sass/modules/_layout.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -1686,22 +1683,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 395, sass/modules/_layout.scss */
+/* line 396, sass/modules/_layout.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 399, sass/modules/_layout.scss */
+/* line 400, sass/modules/_layout.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 403, sass/modules/_layout.scss */
+/* line 404, sass/modules/_layout.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 407, sass/modules/_layout.scss */
+/* line 408, sass/modules/_layout.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -1711,7 +1708,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 416, sass/modules/_layout.scss */
+/* line 417, sass/modules/_layout.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -1720,7 +1717,7 @@ a img.aligncenter {
 }
 
 /* Text meant only for screen readers. */
-/* line 424, sass/modules/_layout.scss */
+/* line 425, sass/modules/_layout.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -1730,7 +1727,7 @@ a img.aligncenter {
   overflow: hidden;
 }
 
-/* line 433, sass/modules/_layout.scss */
+/* line 434, sass/modules/_layout.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
