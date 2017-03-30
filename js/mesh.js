@@ -16,24 +16,41 @@ jQuery(document).ready(function($){
 	// 	}
 	// }
 
-	$('.imgslider').slick({
+	$('.slider_container').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.textslider',
-		arrows: false,
+		//asNavFor: '.imgslider',
 		dots: true,
-		appendDots: $('.slider_container'),
-		autoplay: true,
-		autoplaySpeed: 8000
-	});
-	$('.textslider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.imgslider',
+		speed: 2000,
+		infinite: true,
+	 	autoplay: true,
+	 	autoplaySpeed: 2000,
 		arrows: false,
 		fade: true,
-		cssEase: 'ease-in-out'
+		cssEase: 'ease-in-out',
+		pauseOnHover: true,
+		pauseOnFocus: true,
+		pauseOnDotsHover: true
 	});
+
+	// $('.imgslider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.textslider',
+	// 	arrows: false,
+	// 	dots: true,
+	// 	appendDots: $('.slider_container'),
+	// 	autoplay: true,
+	// 	autoplaySpeed: 8000
+	// });
+	// $('.textslider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.imgslider',
+	// 	arrows: false,
+	// 	fade: true,
+	// 	cssEase: 'ease-in-out'
+	// });
 
 	//Show/Hide for nav (public/private) @mobile resolution
 	$('#mobile_menu').click(function(){

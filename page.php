@@ -48,7 +48,7 @@
 			<?php if ($show_content == true ){ ?>
 			<div class="slider_container row">
 				<?php if (have_rows('slide_panel')): ?>
-					<div class="columns-4 no-padding imgslider">
+					<!-- columns-4 no-padding imgslider -->
 					<?php while (have_rows('slide_panel')):the_row(); 
 							$image = get_sub_field('slide_image');
 							$image_url = $image['sizes']['large'];
@@ -57,35 +57,38 @@
 							$subtitle = get_sub_field('slide_subtitle');
 							$slide_content = get_sub_field('slide_panel_text');
 						?>
-
+						<?php if ($image != ''){ ?>
+						<div class="slide">
 						
-							<div class="indiv_slide" style="background-image: url('<?php echo $image_url; ?>');">
+							<div class="indiv_slide columns-4 no-padding" style="background-image: url('<?php echo $image_url; ?>');">
 								<span class="sr-only"><?php echo $image_alt;?></span>
-								<!-- <img style="display:none;" src="<?php //echo $image_url; ?>" alt="<?php //echo $image_alt;?>"> -->
 							</div>
-							<?php endwhile; ?>
-						</div> <!-- end imgslider -->
-							<?php endif; ?>
-							
-						<?php if (have_rows('slide_panel')): ?>
-						<div class="columns-8 no-padding textslider">
-							<?php while (have_rows('slide_panel')):the_row(); 
-							$image = get_sub_field('slide_image');
-							$image_url = $image['sizes']['large'];
-							$title = get_sub_field('slide_title');
-							$subtitle = get_sub_field('slide_subtitle');
-							$slide_content = get_sub_field('slide_panel_text');
-							?>
 
-							<div class="indiv_text_slide">
-								<h3><?php echo $title; ?></h3>
-								<?php if ($subtitle != ''){ ?>
-								<h5><?php echo $subtitle; ?></h5>
-								<?php } ?>
-								<?php echo $slide_content; ?>
+							<div class="columns-8 no-padding indiv_text_slide textslider">
+								<div class="wrap">
+									<h3><?php echo $title; ?></h3>
+									<?php if ($subtitle != ''){ ?>
+									<h5><?php echo $subtitle; ?></h5>
+									<?php } ?>
+									<?php echo $slide_content; ?>
+								</div>
 							</div>
+						</div>
+						<?php }else{ ?>
+						<div class="slide">
+							<div class="columns-12 no-padding indiv_text_slide single textslider">
+								<div class="wrap">
+									<h4><?php echo $title; ?></h4>
+									<?php if ($subtitle != ''){ ?>
+									<h3><?php echo $subtitle; ?></h3>
+									<?php } ?>
+									<?php echo $slide_content; ?>
+								</div>
+							</div>
+						</div>
+						<?php } ?>
 							<?php endwhile; ?>
-						</div><!-- end textslider -->
+						<!-- </div> --><!-- end textslider -->
 							<?php endif; ?>
 			</div><!-- end slider container -->
 			<div id="content_container" class="content">

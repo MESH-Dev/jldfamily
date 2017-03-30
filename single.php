@@ -17,7 +17,7 @@
 					<p class="postinfo">Published <a href="<?php echo get_day_link($post_year, $post_month, $post_day); ?>"><?php the_date() ?></a> by <?php the_author_posts_link(); ?></p>
 					<?php 	// check if the post has a Post Thumbnail assigned to it.
 								if ( has_post_thumbnail() ) {
-								the_post_thumbnail('medium');
+								the_post_thumbnail('medium', array('class' => 'alignleft'));
 								} 
 							?>
 					<?php the_content(); ?>

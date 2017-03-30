@@ -26,8 +26,13 @@ select:focus{
 
 //Page Template
 .slider_container{
-	position: relative;
+	position: relative; //remove
 	margin-bottom: 2em;
+	//margin-bottom:6em;
+
+	&:not + .slick_dots{
+		margin-bottom:4em;
+	}
 	// img{
 	// 	max-height: 400px;
 	// 	min-width: 100%;
@@ -49,12 +54,29 @@ select:focus{
 		height: 400px;
 		vertical-align: top;
 		overflow: hidden;
-		p, h3, h5{
+		//padding:2em;
+		p, h2, h3, h4, h5, h6{
 			color: #c9cac9;
 			margin-bottom: 1rem;
 		}
+
+		.wrap{
+			margin: 2em auto;
+			width:90%;
+		}
+
+		&.single{
+			text-align:center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			h4{
+				text-transform:uppercase;
+				font-size:2em;
+			}
+		}
 		.indiv_text_slide{
-			padding: 2em;
+			//padding: 2em;
 		}
 		@media screen and (max-width: 750px){
 			height: auto;
@@ -63,6 +85,12 @@ select:focus{
 	.slick-dots{
 		text-align: center;
 		list-style-type: disc;
+
+		// Possible addition?
+		// position: absolute;
+		// width: 100%;
+		// bottom: -3.5em;
+		// right: 0;
 		li{
 			position: relative;
 		    display: inline-block;
