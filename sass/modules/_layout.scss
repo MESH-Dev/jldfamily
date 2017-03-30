@@ -30,8 +30,8 @@ select:focus{
 	margin-bottom: 2em;
 	//margin-bottom:6em;
 
-	&:not + .slick_dots{
-		margin-bottom:4em;
+	&.no-dots{
+		margin-bottom:6em;
 	}
 	// img{
 	// 	max-height: 400px;
@@ -477,4 +477,16 @@ a img.aligncenter {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+//Accessibility
+.sr-only{
+	position:absolute;
+	width:1px;
+	height:1px;
+	padding:0;
+	margin:-1px;
+	overflow:hidden;
+	clip:rect(0, 0, 0, 0);
+	border:0;
 }

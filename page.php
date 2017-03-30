@@ -46,9 +46,17 @@
 
 
 			<?php if ($show_content == true ){ ?>
-			<div class="slider_container row">
-				<?php if (have_rows('slide_panel')): ?>
-					<!-- columns-4 no-padding imgslider -->
+			<!-- <div class="slider_container row"> -->
+				<?php if (have_rows('slide_panel')): 
+					$rows = get_field('slide_panel');
+					$row_count = count($rows);
+					$no_dots = '';
+
+					if($row_count == 1){
+						$no_dots = 'no-dots';
+					}
+					?>
+					<div class="slider_container row <?php echo $no_dots; ?>">
 					<?php while (have_rows('slide_panel')):the_row(); 
 							$image = get_sub_field('slide_image');
 							$image_url = $image['sizes']['large'];
@@ -80,7 +88,7 @@
 								<div class="wrap">
 									<h4><?php echo $title; ?></h4>
 									<?php if ($subtitle != ''){ ?>
-									<h3><?php echo $subtitle; ?></h3>
+									<h5><?php echo $subtitle; ?></h5>
 									<?php } ?>
 									<?php echo $slide_content; ?>
 								</div>
@@ -89,8 +97,9 @@
 						<?php } ?>
 							<?php endwhile; ?>
 						<!-- </div> --><!-- end textslider -->
+						</div><!-- end slider container -->
 							<?php endif; ?>
-			</div><!-- end slider container -->
+			
 			<div id="content_container" class="content">
 				<!-- <?php //the_content(); ?> -->
 

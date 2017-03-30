@@ -1283,8 +1283,8 @@ select:focus {
   margin-bottom: 2em;
 }
 /* line 33, sass/modules/_layout.scss */
-.slider_container:not + .slick_dots {
-  margin-bottom: 4em;
+.slider_container.no-dots {
+  margin-bottom: 6em;
 }
 /* line 40, sass/modules/_layout.scss */
 .slider_container .indiv_slide {
@@ -1765,4 +1765,16 @@ a img.aligncenter {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar. */
+}
+
+/* line 483, sass/modules/_layout.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
