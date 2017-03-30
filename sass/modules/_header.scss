@@ -51,14 +51,16 @@ nav{
 	@media screen and (max-width: 845px){
 		height: 60px;
 	}
-	#menu-item-17{
+	//Note always make this any li in the nav, not just a specific element in nav
+	//This was #menu-item-17 which was specific to only 1 nav item and a specific dB
+	li{
 		position: relative;
 	}
 	@media screen and (min-width: 845px){
 		.sub-menu{
 			display: none;
 		}
-		#menu-item-17:hover > .sub-menu{
+		li:hover > .sub-menu{
 			display: initial;
 		}
 	}
