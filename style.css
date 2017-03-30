@@ -1411,48 +1411,60 @@ select:focus {
   user-select: text;
 }
 
-/* line 177, sass/modules/_layout.scss */
+/* line 178, sass/modules/_layout.scss */
+.slider_container + .content {
+  border-top: 1px solid #472A2B;
+}
+/* line 181, sass/modules/_layout.scss */
+.slider_container + .content::before {
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  border-top: 4px solid #000000;
+  content: '';
+}
+
+/* line 190, sass/modules/_layout.scss */
 .content {
   padding-top: 1em;
   padding-bottom: 1em;
   position: relative;
-  border-top: 1px solid #472A2B;
 }
-/* line 182, sass/modules/_layout.scss */
+/* line 196, sass/modules/_layout.scss */
 .content p {
   margin: 0;
 }
-/* line 185, sass/modules/_layout.scss */
+/* line 199, sass/modules/_layout.scss */
 .content ul {
   font-family: Georgia, serif;
 }
 @media screen and (max-width: 750px) {
-  /* line 190, sass/modules/_layout.scss */
+  /* line 204, sass/modules/_layout.scss */
   .content .content_columns {
     padding-bottom: 1em;
   }
-  /* line 195, sass/modules/_layout.scss */
+  /* line 209, sass/modules/_layout.scss */
   .content .content_columns:nth-of-type(1) .wrap {
     padding-right: 1em;
     padding-left: 1em;
   }
 }
-/* line 203, sass/modules/_layout.scss */
+/* line 217, sass/modules/_layout.scss */
 .content .columns-4 {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-/* line 208, sass/modules/_layout.scss */
+/* line 222, sass/modules/_layout.scss */
 .content .columns-4:nth-of-type(1) {
   padding-right: 1em;
 }
 @media screen and (max-width: 750px) {
-  /* line 208, sass/modules/_layout.scss */
+  /* line 222, sass/modules/_layout.scss */
   .content .columns-4:nth-of-type(1) {
     padding: 1em;
   }
 }
-/* line 214, sass/modules/_layout.scss */
+/* line 228, sass/modules/_layout.scss */
 .content .columns-4:nth-of-type(2) {
   position: relative;
   padding-right: 1em;
@@ -1461,7 +1473,7 @@ select:focus {
   border-left: 2px solid #ccc;
 }
 @media screen and (max-width: 750px) {
-  /* line 214, sass/modules/_layout.scss */
+  /* line 228, sass/modules/_layout.scss */
   .content .columns-4:nth-of-type(2) {
     border-right: 0;
     border-left: 0;
@@ -1469,17 +1481,17 @@ select:focus {
     border-bottom: 2px solid #ccc;
   }
 }
-/* line 227, sass/modules/_layout.scss */
+/* line 241, sass/modules/_layout.scss */
 .content .columns-4:nth-of-type(3) {
   padding-left: 1em;
 }
 @media screen and (max-width: 750px) {
-  /* line 227, sass/modules/_layout.scss */
+  /* line 241, sass/modules/_layout.scss */
   .content .columns-4:nth-of-type(3) {
     padding: 1em;
   }
 }
-/* line 236, sass/modules/_layout.scss */
+/* line 250, sass/modules/_layout.scss */
 .content .columns-6:nth-of-type(2) {
   position: relative;
   padding-right: 1em;
@@ -1487,23 +1499,15 @@ select:focus {
   border-left: 2px solid #ccc;
 }
 @media screen and (max-width: 750px) {
-  /* line 236, sass/modules/_layout.scss */
+  /* line 250, sass/modules/_layout.scss */
   .content .columns-6:nth-of-type(2) {
     border-right: 0;
     border-left: 0;
     border-top: 2px solid #ccc;
   }
 }
-/* line 250, sass/modules/_layout.scss */
-.content::before {
-  position: absolute;
-  width: 100%;
-  top: -10px;
-  border-top: 4px solid #000000;
-  content: '';
-}
 
-/* line 261, sass/modules/_layout.scss */
+/* line 276, sass/modules/_layout.scss */
 .posts_list {
   display: inline-block;
   vertical-align: top;
@@ -1511,50 +1515,50 @@ select:focus {
   border-right: 2px solid #ccc;
 }
 @media screen and (max-width: 750px) {
-  /* line 261, sass/modules/_layout.scss */
+  /* line 276, sass/modules/_layout.scss */
   .posts_list {
     border-right: 0px;
   }
 }
 
-/* line 270, sass/modules/_layout.scss */
+/* line 285, sass/modules/_layout.scss */
 .postinfo {
   font-size: 1.6rem;
 }
 
-/* line 273, sass/modules/_layout.scss */
+/* line 288, sass/modules/_layout.scss */
 .sidebar {
   position: relative;
   display: inline-block;
   vertical-align: top;
   padding: 1em;
 }
-/* line 278, sass/modules/_layout.scss */
+/* line 293, sass/modules/_layout.scss */
 .sidebar h2 {
   margin-bottom: 1rem;
 }
-/* line 281, sass/modules/_layout.scss */
+/* line 296, sass/modules/_layout.scss */
 .sidebar ul {
   margin-bottom: 2em;
 }
-/* line 284, sass/modules/_layout.scss */
+/* line 299, sass/modules/_layout.scss */
 .sidebar li {
   list-style-type: none;
   font-size: 1.4em;
   font-weight: 400;
   font-family: Georgia, serif;
 }
-/* line 289, sass/modules/_layout.scss */
+/* line 304, sass/modules/_layout.scss */
 .sidebar li a {
   font-weight: 700;
 }
 @media screen and (max-width: 750px) {
-  /* line 273, sass/modules/_layout.scss */
+  /* line 288, sass/modules/_layout.scss */
   .sidebar {
     border-top: 1px solid #472A2B;
   }
 }
-/* line 296, sass/modules/_layout.scss */
+/* line 311, sass/modules/_layout.scss */
 .sidebar::before {
   display: none;
   position: absolute;
@@ -1565,69 +1569,69 @@ select:focus {
   content: '';
 }
 @media screen and (max-width: 750px) {
-  /* line 296, sass/modules/_layout.scss */
+  /* line 311, sass/modules/_layout.scss */
   .sidebar::before {
     display: initial;
   }
 }
 @media screen and (max-width: 750px) {
-  /* line 308, sass/modules/_layout.scss */
+  /* line 323, sass/modules/_layout.scss */
   .sidebar ul {
     border-bottom: 2px solid #ccc;
   }
 }
 
-/* line 314, sass/modules/_layout.scss */
+/* line 329, sass/modules/_layout.scss */
 .post_listitem {
   border-bottom: 2px solid #ccc;
   padding-top: 1em;
   padding-bottom: 1em;
 }
-/* line 318, sass/modules/_layout.scss */
+/* line 333, sass/modules/_layout.scss */
 .post_listitem:last-of-type {
   border-bottom: 0px;
 }
 
-/* line 323, sass/modules/_layout.scss */
+/* line 338, sass/modules/_layout.scss */
 .pagination {
   font-family: Georgia, serif;
   color: #9d9fa2;
 }
-/* line 326, sass/modules/_layout.scss */
+/* line 341, sass/modules/_layout.scss */
 .pagination a {
   font-size: 1.8em;
   font-weight: 700;
 }
-/* line 331, sass/modules/_layout.scss */
+/* line 346, sass/modules/_layout.scss */
 .pagination .current {
   font-size: 1.8em;
   font-weight: 400;
 }
 
-/* line 339, sass/modules/_layout.scss */
+/* line 354, sass/modules/_layout.scss */
 .post_content {
   display: inline-block;
   vertical-align: top;
   border-right: 2px solid #ccc;
   padding: 1em;
 }
-/* line 344, sass/modules/_layout.scss */
+/* line 359, sass/modules/_layout.scss */
 .post_content h1 {
   margin-bottom: 1rem;
 }
-/* line 347, sass/modules/_layout.scss */
+/* line 362, sass/modules/_layout.scss */
 .post_content img {
   max-width: 100%;
   height: auto;
 }
 @media screen and (max-width: 750px) {
-  /* line 339, sass/modules/_layout.scss */
+  /* line 354, sass/modules/_layout.scss */
   .post_content {
     border-right: 0px;
   }
 }
 
-/* line 359, sass/modules/_layout.scss */
+/* line 374, sass/modules/_layout.scss */
 .post ol li, .post ul li,
 .content_columns ol li,
 .content_columns ul li {
@@ -1636,62 +1640,62 @@ select:focus {
 }
 
 @media (max-width: 750px) {
-  /* line 369, sass/modules/_layout.scss */
+  /* line 384, sass/modules/_layout.scss */
   .smaller-than-desktop__hide {
     display: none;
   }
 }
 /* =WordPress Core
 -------------------------------------------------------------- */
-/* line 376, sass/modules/_layout.scss */
+/* line 391, sass/modules/_layout.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 380, sass/modules/_layout.scss */
+/* line 395, sass/modules/_layout.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 386, sass/modules/_layout.scss */
+/* line 401, sass/modules/_layout.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 391, sass/modules/_layout.scss */
+/* line 406, sass/modules/_layout.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 396, sass/modules/_layout.scss */
+/* line 411, sass/modules/_layout.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 401, sass/modules/_layout.scss */
+/* line 416, sass/modules/_layout.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 405, sass/modules/_layout.scss */
+/* line 420, sass/modules/_layout.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 410, sass/modules/_layout.scss */
+/* line 425, sass/modules/_layout.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 416, sass/modules/_layout.scss */
+/* line 431, sass/modules/_layout.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -1701,22 +1705,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 424, sass/modules/_layout.scss */
+/* line 439, sass/modules/_layout.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 428, sass/modules/_layout.scss */
+/* line 443, sass/modules/_layout.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 432, sass/modules/_layout.scss */
+/* line 447, sass/modules/_layout.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 436, sass/modules/_layout.scss */
+/* line 451, sass/modules/_layout.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -1726,7 +1730,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 445, sass/modules/_layout.scss */
+/* line 460, sass/modules/_layout.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -1735,7 +1739,7 @@ a img.aligncenter {
 }
 
 /* Text meant only for screen readers. */
-/* line 453, sass/modules/_layout.scss */
+/* line 468, sass/modules/_layout.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -1745,7 +1749,7 @@ a img.aligncenter {
   overflow: hidden;
 }
 
-/* line 462, sass/modules/_layout.scss */
+/* line 477, sass/modules/_layout.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -1767,7 +1771,7 @@ a img.aligncenter {
   /* Above WP toolbar. */
 }
 
-/* line 483, sass/modules/_layout.scss */
+/* line 498, sass/modules/_layout.scss */
 .sr-only {
   position: absolute;
   width: 1px;

@@ -174,11 +174,25 @@ user-select: none;
    user-select: text;
 }
 
+//Remove borders if .content does not fall after a .slider_container
+.slider_container + .content{
+	border-top: 1px solid #472A2B;
+
+	&::before{
+		position: absolute;
+		width: 100%;
+		top: -10px;
+		border-top: 4px solid $black;
+		content: '';
+	}
+}
+
 .content{
 	padding-top: 1em;
 	padding-bottom: 1em;
 	position: relative;
-	border-top: 1px solid #472A2B;
+	// Added to the new declaration above
+	//border-top: 1px solid #472A2B;
 	p{
 		margin: 0;
 	}
@@ -247,13 +261,14 @@ user-select: none;
 			}
 		}
 	}
-	&::before{
-		position: absolute;
-		width: 100%;
-		top: -10px;
-		border-top: 4px solid $black;
-		content: '';
-	}
+	// Added to the new declaration above
+	// &::before{
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	top: -10px;
+	// 	border-top: 4px solid $black;
+	// 	content: '';
+	// }
 }
 //Page Template
 
