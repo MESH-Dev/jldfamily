@@ -246,11 +246,11 @@
 				<nav class="main-navigation">
 					<span id="mobile_menu" class="closed">Menu</span>
 
-					<?php 
+					<?php
 						// If user is logged in (ie, they have an account in the site)
 						// show the private nav
 						if (is_user_logged_in()) { ?>
-						<?php 
+						<?php
 							if(has_nav_menu('private_nav')){
 								$defaults = array(
 									'theme_location'  => 'private_nav',
@@ -272,8 +272,8 @@
 								); wp_nav_menu( $defaults );
 							}else{
 								echo "<p><em>private_nav</em> doesn't exist! Create it and it'll render here.</p>";
-							} 
-							}else{ 
+							}
+							}else{
 								// If the user is not logged in, (ie they may not have an account)
 								// show the public nav
 								?>
@@ -299,10 +299,10 @@
 								}else{
 									echo "<p><em>public_nav</em> doesn't exist! Create it and it'll render here.</p>";
 								} }?>
-						<?php 
+						<?php
 							?>
 							<button>
-								<?php 
+								<?php
 								if(is_user_logged_in()){ ?>
 								<a href="<?php echo wp_logout_url(home_url('/')); ?>">Logout</a>
 								<?php }else{?>
@@ -311,14 +311,14 @@
 							</button>
 				</nav>
 				<button id="mobile_login">
-					<?php 
+					<?php
 						if(is_user_logged_in()){ ?>
 						<a href="<?php echo wp_logout_url(home_url('/login')); ?>">Logout</a>
 						<?php }else{?>
 						<a href="<?php echo home_url('/'); ?>/login">Login</a>
 					<?php } ?>
 				</button>
-				<img src="<?php bloginfo('template_directory'); ?>/img/top-accent.jpg">
+				<div class='accent top' style="background-image:url('<?php bloginfo('template_directory'); ?>/img/top-accent.jpg')"></div>
 			</div>
 
 		</div>

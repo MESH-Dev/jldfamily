@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="columns-12">
-			<img src="<?php bloginfo('template_directory'); ?>/img/bottom-accent.jpg">
+			<div class="accent" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bottom-accent.jpg')"></div>
 <!-- 				<nav class="main-navigation">
 					<?php //wp_nav_menu( array('menu_id' => 'footer-menu', 'theme_location' => 'footer-menu') ); ?>
 				</nav> -->

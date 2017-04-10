@@ -6,14 +6,14 @@ header{
 	ul, li{
 		margin: 0;
 	}
-	img{
+	.accent{
 		width: 100%;
+		height: 50px;
 		margin-top: 20px;
 		margin-bottom: 20px;
-		@media screen and (max-width: 795px){
-			margin-top: 0;
-			margin-bottom: 1em;
-		}
+		background-position: center;
+		background-size: 960px;
+		clear: both;
 	}
 	button{
 		font-family: Georgia;
@@ -25,7 +25,7 @@ header{
 		height: 100%;
 		border: 0px;
 		background-color: #E4E4E4;
-		@media screen and (max-width: 845px){
+		@media screen and (max-width: 920px){
 			display: none;
 		}
 	}
@@ -34,7 +34,10 @@ header{
 		float: right;
 		height: 40px;
 		display: none;
-		@media screen and (max-width: 845px){
+		a{
+			color: $dark_blue;
+		}
+		@media screen and (max-width: 920px){
 			display: inline-block;
 			margin: 1em 0;
 		}
@@ -48,7 +51,7 @@ nav{
 	position: relative;
 	font-weight: 400;
 	//font-size: 16px;
-	@media screen and (max-width: 845px){
+	@media screen and (max-width: 920px){
 		height: 60px;
 	}
 	//Note always make this any li in the nav, not just a specific element in nav
@@ -56,7 +59,7 @@ nav{
 	li{
 		position: relative;
 	}
-	@media screen and (min-width: 845px){
+	@media screen and (min-width: 920px){
 		.sub-menu{
 			display: none;
 		}
@@ -70,7 +73,7 @@ nav{
 		// padding-top: 10px;
 		// padding-bottom: 10px;
 		display: inline-block;
-		@media screen and (max-width: 845px){
+		@media screen and (max-width: 920px){
 			display: none;
 			position: absolute;
 			left: 0;
@@ -92,7 +95,7 @@ nav{
 				font-weight: 700;
 				font-size: 1.6em;
 			}
-			@media screen and (max-width: 845px){
+			@media screen and (max-width: 920px){
 				display: block;
 				width: 100%;
 				border-bottom: 1px solid #000;
@@ -108,19 +111,19 @@ nav{
 			top: 100%;
 			left: 0;
 			width: 200px;
-			border: 1px solid #000;
+			border: 2px solid #000;
 			z-index: 10;
 			background-color: #fff;
 			padding: 0;
 			li{
 				display: block;
 				width: 100%;
-				border-bottom: 1px solid #000;
+				border-bottom: 2px solid #000;
 				padding: 1em;
 				&:last-of-type{
 					border-bottom: 0px;
 				}
-				@media screen and (max-width: 845px){
+				@media screen and (max-width: 920px){
 					border: 0px;
 					padding-bottom: 0;
 					padding-right: 0;
@@ -132,7 +135,7 @@ nav{
 					}
 				}
 			}
-			@media screen and (max-width: 845px){
+			@media screen and (max-width: 920px){
 				position: relative;
 				display: block;
 				width: 100%;
@@ -183,11 +186,12 @@ nav{
 		border: 2px solid #000;
 		font-family: Georgia, serif;
 		font-weight: 700;
+		font-size: 1.6em;
 		color: #637180;
 		vertical-align: middle;
 		padding-left: 1em;
 		padding-right: 1em;
-		@media screen and (max-width: 845px){
+		@media screen and (max-width: 920px){
 			display: block;
 			line-height: 40px;
 		}
@@ -222,9 +226,9 @@ nav{
 			padding-top: 0;
 			padding-bottom: 0;
 		}
-		p, h1{
+		p, h1 a{
 			display: block;
-			width: 90%;
+			width: 325px;
 			margin: 0 auto;
 		}
 		p{
@@ -232,6 +236,14 @@ nav{
 		}
 		h1{
 			font-size: 28px;
+		}
+	}
+	@media screen and (max-width: 399px){
+		p, h1 a{
+			width: 260px;
+		}
+		h1{
+			font-size: 22px;
 		}
 	}
 }
